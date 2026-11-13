@@ -110,6 +110,23 @@ The presence of these cookies is not evidence of a session-authentication token.
 
 The tracked repository contains captured public-client artifacts and their analysis/setup helpers, not a backend application project. A targeted tracked-file inventory found no backend entry directories or backend/package manifests outside the bundled third-party skills. The main normal login callsites do not supply a token-minting or caller-selected-role step. These observations narrow the available evidence; they do not prove the backend has no vulnerabilities.
 
+### Production satellite apps retain a disabled development reader
+
+The follow-up also inspected two archived production apps directly:
+
+- Code: `https://comp.school/code/assets/index-DwyvelI3.js`, original SHA-256 `5dd6c164231ca1b7fac8056927e2f72a029c76be7e10249caf96cbc2150001f4`; readable source has the corresponding hash-named filename under `readable/`.
+- Admin: `https://admin.comp.school/assets/index-DZASS4VW.js`, original SHA-256 `88c99f17e02769f3ca0a8004bc69f8fbaf12460e50bd47f42135329d08c4a145`; readable source has the corresponding hash-named filename under `readable/`.
+
+Both original and readable hashes were checked against the archive metadata, and both readable modules passed Node syntax checking. These satellite artifacts were not re-fetched during this follow-up.
+
+Their normal app wrappers fetch relative `/api/session` with `credentials: "same-origin"`, checking successful HTTP status, a successful payload, a returned user and any configured allowed-role list (Code lines 17743–17757; Admin lines 15821–15835). The login-URL builders attach `returnTo` when the current route is eligible (Code lines 17642–17647; Admin lines 15720–15725). This is a normal-session/login handoff, not evidence of a client-supplied teacher role.
+
+Unlike the main bundle's null fallback, these wrappers retain a development-cookie reader. Its entry points pass `environment.DEV === true` and the current hostname (Code lines 17505–17508; Admin lines 15605–15608). The reader immediately returns `null` unless the development flag is true and the hostname is loopback (Code lines 11206–11207; Admin lines 9410–9411). The loopback predicates accept only localhost, IPv4 loopback or IPv6 loopback (Code lines 11188–11194; Admin lines 9392–9398).
+
+Crucially, the archived Code environment explicitly has `DEV: false`, `MODE: "production"` and `PROD: true` at line 17497; Admin has the same production flags at line 15597. The retained development-reader path is therefore disabled in these reviewed production clients. No development cookie was constructed or replayed, and no claim is made about unreviewed backend acceptance behavior.
+
+The wrappers also have an explicit teacher-to-student preview exception, not a student-to-teacher promotion: the predicate first requires `user.role === "teacher"` (Code lines 17518–17523; Admin lines 15618–15623). This remains frontend presentation evidence rather than proof of server-side permission enforcement.
+
 ## Verification performed and limits
 
 - Checked archived original and readable hashes against their recorded identities.

@@ -4,7 +4,7 @@
 
 Owner requested continued independent investigation rather than supplying teacher credentials. Read the new follow-up section of web/comp.school/client/authentication.md. Parent traced main local-dev cookie cleanup, Ak null fallback and saved-state cookie allowlist/helper. These are not evidence of a teacher session or a frontend signing secret. Backend project inventory is absent; only captured client artifacts and analysis/setup helpers are available.
 
-A read-only child is reviewing normal-session handoff in production code/admin apps. Integrate only verified source findings, not extrapolated backend behavior. No additional live requests were made in this pass. Active checkpoint wake rem_3444fd543c7b475daa30823fd0a979c8 should be cancelled after the reviewed closing checkpoint. Preserve the legitimate-auth reproduction limits rather than presenting a teacher-labelled view as elevated access.
+The delegated satellite review ended without an accepted report. Parent directly verified Code/Admin source callsites, normal /api/session and returnTo builders, DEV-plus-loopback gating, compiled DEV false flags and teacher-to-student-only preview predicates. The report includes exact build identities and lines. All three relevant modules passed Node syntax; original/readable hashes match metadata. No additional live requests were made in this pass. Active checkpoint wake rem_3444fd543c7b475daa30823fd0a979c8 should be cancelled after the reviewed closing checkpoint. Preserve the legitimate-auth reproduction limits rather than presenting a teacher-labelled view as elevated access.
 
 ## Authentication analysis handoff — 2026-11-13T21:36:00.163672+00:00
 

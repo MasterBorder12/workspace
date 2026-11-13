@@ -2,7 +2,7 @@
 
 ## Independent session-persistence investigation — 2026-11-13T21:40:56.106275+00:00
 
-Resumed from clean d87823b and re-read current instructions/state/report. Parent inspected concrete main-bundle helper definitions and references. Found local-development cookie deletion residue with no usable local session fallback (Ak returns null), and separated saved-state recent-session cookies plus /api/saved-state from authentication. Added evidence ranges and explicit limits to authentication.md. A targeted tracked-file inventory found no backend auth project candidates. Satellite normal-session handoff review is pending. No network or credential-bearing operation occurred in this pass; git diff --check passed.
+Resumed from clean d87823b and re-read current instructions/state/report. Parent inspected concrete main-bundle helper definitions and references. Found local-development cookie deletion residue with no usable local session fallback (Ak returns null), and separated saved-state recent-session cookies plus /api/saved-state from authentication. Added evidence ranges and explicit limits to authentication.md. A targeted tracked-file inventory found no backend auth project candidates. The delegated review ended without an accepted report. Parent directly completed the bounded Code/Admin source review: same-origin /api/session, returnTo construction, role predicates, development-reader flag/hostname guards, and explicit DEV false in both production builds. Added source hashes/line evidence to report and checked original/readable identities and Node syntax. No network or credential-bearing operation occurred in this pass; git diff --check passed.
 
 ## Authentication analysis checkpoint — 2026-11-13T21:36:00.163672+00:00
 

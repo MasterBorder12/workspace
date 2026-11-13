@@ -2,7 +2,7 @@
 
 ## Current continuation — 2026-11-13T21:40:56.106275+00:00
 
-Finish the bounded satellite-app normal session/handoff review, verify its source claims and update authentication.md if warranted. Then run the existing updater, confirm no stale/remaining entries, verify current root ZIP and remote head, cancel rem_3444fd543c7b475daa30823fd0a979c8 and deliver exact findings. No credential guesses, fabricated cookies, live authorization bypasses or unrelated source hunting are planned. Authenticated teacher-session establishment remains unverified; do not claim it follows from a view parameter or retained dev cookie name.
+The bounded follow-up is complete: report now covers main persistence and Code/Admin normal-session handoff plus disabled development-reader evidence. Confirm the closing updater, root ZIP and remote head, cancel rem_3444fd543c7b475daa30823fd0a979c8 and deliver exact findings. No teacher session or bypass has been established; no further live investigation is queued. No credential guesses, fabricated cookies, live authorization bypasses or unrelated source hunting are planned. Authenticated teacher-session establishment remains unverified; do not claim it follows from a view parameter or retained dev cookie name.
 
 ## Current next action — 2026-11-13T21:36:00.163672+00:00
 
