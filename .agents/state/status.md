@@ -1,5 +1,17 @@
 # Status
 
+## Current readiness task — 2026-11-13 21:29 UTC
+
+Target: this mc1h repository and its Linux x86-64 sandbox. Requested behavior: inspect the continuation handoff, restore/verify the existing RE tools, run Fastfetch, then stand by. Deliverable: verified local tooling, reproducible setup and an updated root handoff archive. No game binary, crash investigation, ESP implementation or offensive target action is part of this readiness task.
+
+Current branch: `hoplite/siris-b536f523`, starting from `015e6f3`. The initial worktree was clean. Existing web-client extraction artifacts and all thirteen skill folders were preserved. The initial `handoff.zip` passed `ZipFile.testzip()` with 770 members and its manifest present.
+
+Completed: managed startup restored the pinned toolkit; a direct `bash setup.sh` rerun reused the existing installations. Added official portable Fastfetch 2.71.0 to the existing checksum-pinned installer, wrapper and version check. No root access or system packages were used. `bash tools.sh fastfetch --pipe --logo none --structure OS:Kernel:CPU:Memory` reported Ubuntu 24.04.4, Linux 4.19.0-gvisor, two visible CPUs and 8 GiB memory. The CPU model is reported as unknown; sandbox-visible topology is not physical-host identification.
+
+Checks passed: Bash syntax, Python compilation, pinned versions, PE32+ AMD64 parsing, RVA/file-offset conversion, malformed PE rejection, x64 instruction decoding, native C++20 execution and Ghidra 12.2 headless analysis/decompilation. The final updater report and Git state identify the saved commit/push outcome. No Windows/game integration was exercised. No target interactions, signups or email sends were performed; no supplied credentials were persisted.
+
+Next: finish the checkpoint and remote synchronization if authorized access permits, cancel the active-work wake, and stand by for a specific new task. Everything below is historical context unless it remains consistent with this entry.
+
 Current summary updated 2026-11-13T19:16:04.041731+00:00. Earlier sections below are historical where superseded by dated task entries.
 
 ## Stage

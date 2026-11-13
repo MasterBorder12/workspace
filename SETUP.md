@@ -24,8 +24,9 @@ The script checks its basic prerequisites and fails with a diagnostic when one i
 - Ghidra 12.2, official NSA GitHub release.
 - Eclipse Temurin JDK 25.0.5+8, official Adoptium GitHub release.
 - pefile 2024.8.26 and Capstone 5.0.9, from PyPI.
+- Fastfetch 2.71.0, the official Linux AMD64 portable release, for host diagnostics.
 
-The owner explicitly approved all four on 2026-11-13. The installer pins archive URLs and SHA-256 checksums; the Python requirements pin wheel hashes. It installs binary wheels only. It does not download a floating latest release or execute a remote shell installer.
+The owner explicitly approved the four RE tools on 2026-11-13 and requested Fastfetch during the subsequent workspace readiness check. The installer pins archive URLs and SHA-256 checksums; the Python requirements pin wheel hashes. It installs binary wheels only. It does not download a floating latest release or execute a remote shell installer.
 
 Ghidra and Java live in `.tools/`; Python packages live in `.venv/`. Both directories are excluded from Git and the handoff archive. The source installer, pins, startup hook, verification script and this guide are included in the archive. Fresh machines restore tools by running setup, not by carrying third-party binaries in the backup.
 
@@ -36,6 +37,7 @@ Downloads are checksum-verified before extraction. Installations are extracted i
 ```bash
 bash tools.sh python -c 'import pefile, capstone; print(pefile.__version__, capstone.__version__)'
 bash tools.sh ghidra /path/to/projects analysis -import /path/to/binary
+bash tools.sh fastfetch --pipe --logo none --structure OS:Kernel:CPU:Memory
 bash tools.sh verify
 ```
 
@@ -44,6 +46,7 @@ bash tools.sh verify
 ## What verification establishes
 
 - Exact Python package versions.
+- The pinned Fastfetch executable launches and reports version 2.71.0. The host-summary command above limits output to OS, kernel, CPU and memory rather than account or network identifiers.
 - PE32+ AMD64 headers and entry-point RVA/file-offset round trip, using Ghidra's shipped Windows decompiler executable without running that Windows executable.
 - Malformed PE rejection.
 - Known x86-64 instruction decoding.
