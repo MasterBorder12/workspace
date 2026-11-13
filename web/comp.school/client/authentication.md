@@ -67,7 +67,7 @@ This is consistent with browser-managed same-origin session credentials. The rev
 
 ## Roles versus presentation
 
-The main app distinguishes server-returned `user.role` values `admin`, `teacher`, and `student` (lines 58791–58796). Role-aware navigation filters use that returned role (lines 58803–58809).
+The main app distinguishes server-returned `user.role` values `admin`, `teacher`, and `student` (lines 58791–58796). Role-aware navigation filters use that returned role (lines 58803–58809). A teacher-facing component separately displays “Teacher account required” unless its role input is `admin` or `teacher` (lines 38414–38422). This is a client rendering gate, not proof of a server authorization decision.
 
 Separately, a `role` query parameter controls a teacher/student view selector (lines 58764–58769 and 59135–59140). A server-identified student is pinned to the student view and offered only the student selector option (lines 58794–58797). Changing a view parameter is not a supported method of creating a teacher session. Visible links and view state do not prove backend authorization.
 
