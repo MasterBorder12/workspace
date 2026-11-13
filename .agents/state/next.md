@@ -1,5 +1,9 @@
 # Next
 
+## Current continuation — 2026-11-13T21:40:56.106275+00:00
+
+Finish the bounded satellite-app normal session/handoff review, verify its source claims and update authentication.md if warranted. Then run the existing updater, confirm no stale/remaining entries, verify current root ZIP and remote head, cancel rem_3444fd543c7b475daa30823fd0a979c8 and deliver exact findings. No credential guesses, fabricated cookies, live authorization bypasses or unrelated source hunting are planned. Authenticated teacher-session establishment remains unverified; do not claim it follows from a view parameter or retained dev cookie name.
+
 ## Current next action — 2026-11-13T21:36:00.163672+00:00
 
 Flow analysis and independent role review are complete; the report includes the corroborated teacher/admin component gate. Deliver the saved authentication report, distinguishing completed analysis from unverified teacher-session reproduction. The next substantive action requires the missing legitimate teacher input/backend source. No credential guesses, role/session tampering, BTEC substitution or fallback/student reuse is planned. For authenticated reproduction, the minimum input is a legitimate teacher test credential/access code or authorized backend auth source. Cancel active wake rem_0cacd419a1b04a0b87401f09ed1b4660 once done; do not run idle checkpoints.

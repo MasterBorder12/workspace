@@ -1,5 +1,11 @@
 # Handoff
 
+## Independent persistence/handoff follow-up — 2026-11-13T21:40:56.106275+00:00
+
+Owner requested continued independent investigation rather than supplying teacher credentials. Read the new follow-up section of web/comp.school/client/authentication.md. Parent traced main local-dev cookie cleanup, Ak null fallback and saved-state cookie allowlist/helper. These are not evidence of a teacher session or a frontend signing secret. Backend project inventory is absent; only captured client artifacts and analysis/setup helpers are available.
+
+A read-only child is reviewing normal-session handoff in production code/admin apps. Integrate only verified source findings, not extrapolated backend behavior. No additional live requests were made in this pass. Active checkpoint wake rem_3444fd543c7b475daa30823fd0a979c8 should be cancelled after the reviewed closing checkpoint. Preserve the legitimate-auth reproduction limits rather than presenting a teacher-labelled view as elevated access.
+
 ## Authentication analysis handoff — 2026-11-13T21:36:00.163672+00:00
 
 Read web/comp.school/client/authentication.md for evidence identity, exact source lines, normal request shapes, uncertainty and legitimate reproduction checks. Main production index-CHiQZc8e.js was re-fetched anonymously and its exact hash/size match the archive. Only other live read was anonymous /api/session, returning401. No login requests or teacher operations were attempted.

@@ -90,6 +90,26 @@ That BTEC success branch is not evidence of a normal `/api/session` user with ro
 
 Steps 3–6 were not run: no teacher test credential/access code or backend authentication source is available in this task. The minimum next input is either a legitimate teacher test login/access code or the server implementation of `/api/login` and `/api/session` from the authorized test environment.
 
+## Independent follow-up: persistence and apparent local-session leads
+
+The subsequent pass investigated whether the captured production code contained another normal session path, rather than assuming that the owner's next step had to be supplying credentials.
+
+### Local-development residue is not an established production login
+
+The main bundle retains a local-development session cookie name at line 10264. In the traced main bundle, its operational references are a deletion helper at lines 10299–10301 and the logout cleanup at line 59413. The production local-session fallback `Ak` returns `null` at lines 58288–58290. The retained name therefore does not demonstrate a client-side means of creating an authenticated session.
+
+The same code contains an empty build-environment object (line 10131) and an Android-target comparison against it (lines 10286–10288). Loopback-host routing at lines 10292–10297 and 10403–10426 is deployment URL selection, not a teacher authorization result. None of this establishes that a server would accept a fabricated development cookie; no such cookie was constructed or submitted.
+
+### Recent-session cookies are saved application state
+
+The similarly named recent-session cookies appear in an explicit saved-state allowlist (line 10531). The key validator, browser-state collector and writer operate on that allowlist and permitted local-storage prefixes (lines 10535–10542, 10597–10611 and 10625–10632). Their request helper targets `/api/saved-state` (lines 10750–10770).
+
+The presence of these cookies is not evidence of a session-authentication token. Likewise, `Lw`, called after a fallback-student identity is recognized, hydrates saved state through this helper (lines 10888–10896); it is not a teacher token generator. Actual authenticated cookie attributes remain unknown.
+
+### Available source boundary
+
+The tracked repository contains captured public-client artifacts and their analysis/setup helpers, not a backend application project. A targeted tracked-file inventory found no backend entry directories or backend/package manifests outside the bundled third-party skills. The main normal login callsites do not supply a token-minting or caller-selected-role step. These observations narrow the available evidence; they do not prove the backend has no vulnerabilities.
+
 ## Verification performed and limits
 
 - Checked archived original and readable hashes against their recorded identities.

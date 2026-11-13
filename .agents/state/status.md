@@ -1,5 +1,11 @@
 # Status
 
+## Independent session-persistence follow-up — 2026-11-13T21:40:56.106275+00:00
+
+Continued from d87823b without teacher credentials, using the captured production code only. New evidence in web/comp.school/client/authentication.md separates local-development cookie cleanup from actual authentication, and recent-session/saved-state cookies from login state. Production Ak still returns null; the local-development cookie name appears only in declaration/deletion use in the traced main bundle. Saved state uses a separate /api/saved-state helper. Tracked inventory contains public-client artifacts and helpers, not backend auth project sources.
+
+No new network requests, credential submissions, session construction, role changes or privileged operations were performed in this follow-up. No teacher session or bypass is established. Satellite production-app handoff review is running independently. Report diff/whitespace checks passed; preserve existing artifacts/toolkit and checkpoint on hoplite/siris-b536f523. Closing work: integrate supported handoff findings, review, checkpoint and cancel the active wake.
+
 ## Current authentication analysis — 2026-11-13T21:36:00.163672+00:00
 
 Target: production comp.school default authentication, excluding student fallback access. Completed offline tracing of the main client login branches, session hydration, role predicates and separate BTEC grant. The current public production bundle exactly matches original SHA-256 5c6a9d68b722e302195eac2602e907d1bb60657ebba32de14862e232fd748577. A fresh anonymous GET /api/session returned HTTP401. No credential-bearing request, guessing, role manipulation or privileged operation was performed.

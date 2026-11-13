@@ -1,5 +1,9 @@
 # Progress
 
+## Independent session-persistence investigation — 2026-11-13T21:40:56.106275+00:00
+
+Resumed from clean d87823b and re-read current instructions/state/report. Parent inspected concrete main-bundle helper definitions and references. Found local-development cookie deletion residue with no usable local session fallback (Ak returns null), and separated saved-state recent-session cookies plus /api/saved-state from authentication. Added evidence ranges and explicit limits to authentication.md. A targeted tracked-file inventory found no backend auth project candidates. Satellite normal-session handoff review is pending. No network or credential-bearing operation occurred in this pass; git diff --check passed.
+
 ## Authentication analysis checkpoint — 2026-11-13T21:36:00.163672+00:00
 
 Traced real production login and session callsites. Recorded exact source build identity and readable-copy hash. Confirmed two normal request bodies, server-returned role predicates, display-only view selection and separate BTEC/fallback component state. Created web/comp.school/client/authentication.md with source lines, evidence limits and a legitimate browser reproduction procedure. Fresh public asset matches archive; fresh anonymous session request returned401. Original/readable hash and Node syntax checks passed. No teacher login, credential submission or privileged resource access occurred. Independent role review corroborated the role predicates and separate BTEC/session state. Parent re-read the teacher/admin component gate and added its evidence to the report. Closing checkpoint includes the final reviewed report; no teacher session is claimed.
