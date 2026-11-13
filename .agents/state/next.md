@@ -1,5 +1,11 @@
 # Next
 
+## Current next action — 2026-11-13 21:29 UTC
+
+The workspace-readiness task is verified. Confirm the final updater JSON reports no stale briefings or remaining files, verify the refreshed root `handoff.zip`, and synchronize only the current non-default branch when access allows. Cancel active-work wake `rem_ec605ad6a94545cea125526a844578af` after completion. Then stand by for the owner's next specific target/behavior/deliverable; do not resume or expand earlier web collection or infer a game task from profile examples.
+
+Subsequent agents should run `timeout 240s bash setup.sh` and `timeout 240s bash tools.sh verify` after a fresh restore. Fastfetch is now restored by that same setup; invoke `timeout 15s bash tools.sh fastfetch --pipe --logo none --structure OS:Kernel:CPU:Memory`. Do not install duplicate tools or expose supplied credentials.
+
 ## Actions in priority order
 
 1. Client JS extension is complete within documented scope. Read web/comp.school/client/README.md, GAPS.md, pages.json and per-host apps/ indexes. Original responses remain in objects/; do not mistake formatted copies for recovered original TS/TSX.

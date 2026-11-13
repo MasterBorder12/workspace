@@ -1,5 +1,15 @@
 # Handoff
 
+## Readiness update — 2026-11-13 21:29 UTC
+
+Continue on `hoplite/siris-b536f523`; the former branch names below are historical. Preserve the completed web archive. The readiness request is complete apart from the final checkpoint/synchronization confirmation, not an instruction to expand the previous web investigation.
+
+The existing `.agents/scripts/toolsetup.py` now restores official portable Fastfetch 2.71.0 under `.tools/fastfetch-linux-amd64` alongside the approved pinned RE tools. Its release archive SHA-256 is pinned in the installer and was checked against GitHub's official release asset digest. `tools.sh fastfetch` dispatches without a global PATH change. `toolcheck.py` verifies its reported version. No new installer or system-package dependency was added.
+
+Reproduce with `timeout 240s bash setup.sh`, `timeout 240s bash tools.sh verify`, then `timeout 15s bash tools.sh fastfetch --pipe --logo none --structure OS:Kernel:CPU:Memory`. The limited structure avoids account and network identifiers. Fastfetch is a sandbox observation, not evidence of the physical host or a target game build. Setup, all existing functional toolkit checks and the Fastfetch run passed in this sandbox.
+
+Checkpoint using the existing updater only. The initial branch had no upstream; use a non-force explicit current-branch refspec if publishing it, never the remote default branch. No PR, target probing or email work is requested. The active checkpoint wake should be cancelled once this readiness delivery is saved.
+
 ## Architecture
 
 No application exists yet. The repository holds agent infrastructure only.

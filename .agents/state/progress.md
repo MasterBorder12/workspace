@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-11-13 21:29 UTC — workspace readiness
+
+Read the continuation briefings and inspected the clean current branch, existing scripts, skill folders and root archive. The original archive passed integrity validation with 770 members. Managed setup restored Ghidra 12.2, Temurin 25.0.5+8, pefile 2024.8.26, Capstone 5.0.9 and Prettier 3.10.1. Direct setup rerun and the unmodified baseline functional checks passed.
+
+Fastfetch was absent. Retrieved the official 2.71.0 Linux AMD64 portable release metadata and verified the downloaded archive against its published SHA-256. Extended the existing installer, tools wrapper, verification and setup guide; no global packages or duplicate installer. Fastfetch ran with OS/kernel/CPU/memory-only output. The updated Bash/Python syntax checks and the full functional toolkit check passed, including real C++20 execution and Ghidra decompilation.
+
+No target interactions, signups or email sends were made. No supplied credentials were written. Saving the updated state and handoff through the existing updater is the closing action; use the resulting checkpoint metadata and Git state for its exact commit/synchronization outcome.
+
 Times are UTC. Checkpoint times come from the updater log. The other times are estimates.
 
 ## 2026-11-12

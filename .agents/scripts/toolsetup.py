@@ -13,7 +13,8 @@ root = Path(__file__).resolve().parents[2]
 home = root / '.tools'
 archives = [
     ('ghidra.zip', 'https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.2_build/ghidra_12.2_PUBLIC_20261016.zip', '2c2cd776db3c1f6a097ba418922378ac3649cadd5e844a6f5f088ae628a7be67', 'ghidra_12.2_PUBLIC', 'zip'),
-    ('jdk.tar.gz', 'https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_linux_hotspot_25.0.5_8.tar.gz', '68982529869257d0ee6b824ec5aa270ff8b118bb438670da0b97ebdab178d7fb', 'jdk-25.0.5+8', 'tar')
+    ('jdk.tar.gz', 'https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.5%2B8/OpenJDK25U-jdk_x64_linux_hotspot_25.0.5_8.tar.gz', '68982529869257d0ee6b824ec5aa270ff8b118bb438670da0b97ebdab178d7fb', 'jdk-25.0.5+8', 'tar'),
+    ('fastfetch.tar.gz', 'https://github.com/fastfetch-cli/fastfetch/releases/download/2.71.0/fastfetch-linux-amd64.tar.gz', 'abf5c99a3702cce8d3c7fa2cccd3ac205076ae0f2e45bced24a42a68821702d6', 'fastfetch-linux-amd64', 'tar')
 ]
 
 
@@ -79,6 +80,7 @@ def main():
         run(['uv', 'venv', '--python', sys.executable, str(root / '.venv')])
     run(['uv', 'pip', 'sync', '--python', str(python), '--require-hashes', '--only-binary', ':all:', '--index-url', 'https://pypi.org/simple', str(root / '.agents/scripts/requirements.txt')])
     run([str(home / 'jdk-25.0.5+8/bin/java'), '-version'])
+    run([str(home / 'fastfetch-linux-amd64/usr/bin/fastfetch'), '--version'])
     run([str(python), '-c', 'import importlib.metadata; print("pefile=" + importlib.metadata.version("pefile")); print("capstone=" + importlib.metadata.version("capstone"))'])
     print('Approved toolkit setup complete', flush=True)
 

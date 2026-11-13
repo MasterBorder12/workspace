@@ -27,6 +27,9 @@ def require(value, message):
 def main():
     versions = {name: importlib.metadata.version(name) for name in ['pefile', 'capstone']}
     require(versions == {'pefile': '2024.8.26', 'capstone': '5.0.9'}, 'Unexpected Python package versions')
+    fastfetch = run([str(root / '.tools/fastfetch-linux-amd64/usr/bin/fastfetch'), '--version']).strip()
+    require(fastfetch.split()[:2] == ['fastfetch', '2.71.0'], 'Unexpected fastfetch version: ' + fastfetch)
+    print(fastfetch, flush=True)
     code = bytes.fromhex('4889d84883c007c3')
     assembly = [(item.mnemonic, item.op_str) for item in capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64).disasm(code, 0x1000)]
     require(assembly == [('mov', 'rax, rbx'), ('add', 'rax, 7'), ('ret', '')], 'Unexpected x86-64 disassembly')

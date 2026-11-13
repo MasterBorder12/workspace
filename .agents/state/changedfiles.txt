@@ -1,10 +1,4 @@
 SETUP.md
-setup.sh
-.agents/scripts/browseraudit.mjs
-.agents/scripts/clientsetup.py
-.agents/scripts/clientfetch.py
-.agents/scripts/jsindex.mjs
-.agents/scripts/embedded.mjs
-.agents/scripts/pagecoverage.py
-.agents/scripts/webreport.py
-web/comp.school
+tools.sh
+.agents/scripts/toolsetup.py
+.agents/scripts/toolcheck.py
