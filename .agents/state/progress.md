@@ -2,7 +2,7 @@
 
 ## Authentication analysis checkpoint — 2026-11-13T21:36:00.163672+00:00
 
-Traced real production login and session callsites. Recorded exact source build identity and readable-copy hash. Confirmed two normal request bodies, server-returned role predicates, display-only view selection and separate BTEC/fallback component state. Created web/comp.school/client/authentication.md with source lines, evidence limits and a legitimate browser reproduction procedure. Fresh public asset matches archive; fresh anonymous session request returned401. Original/readable hash and Node syntax checks passed. No teacher login, credential submission or privileged resource access occurred. Independent role review is pending; closing work is report review and final saved-state confirmation.
+Traced real production login and session callsites. Recorded exact source build identity and readable-copy hash. Confirmed two normal request bodies, server-returned role predicates, display-only view selection and separate BTEC/fallback component state. Created web/comp.school/client/authentication.md with source lines, evidence limits and a legitimate browser reproduction procedure. Fresh public asset matches archive; fresh anonymous session request returned401. Original/readable hash and Node syntax checks passed. No teacher login, credential submission or privileged resource access occurred. Independent role review corroborated the role predicates and separate BTEC/session state. Parent re-read the teacher/admin component gate and added its evidence to the report. Closing checkpoint includes the final reviewed report; no teacher session is claimed.
 
 ## 2026-11-13 21:29 UTC — workspace readiness
 
