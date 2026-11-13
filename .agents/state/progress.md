@@ -1,5 +1,9 @@
 # Progress
 
+## Authentication analysis checkpoint — 2026-11-13T21:36:00.163672+00:00
+
+Traced real production login and session callsites. Recorded exact source build identity and readable-copy hash. Confirmed two normal request bodies, server-returned role predicates, display-only view selection and separate BTEC/fallback component state. Created web/comp.school/client/authentication.md with source lines, evidence limits and a legitimate browser reproduction procedure. Fresh public asset matches archive; fresh anonymous session request returned401. Original/readable hash and Node syntax checks passed. No teacher login, credential submission or privileged resource access occurred. Independent role review is pending; closing work is report review and final saved-state confirmation.
+
 ## 2026-11-13 21:29 UTC — workspace readiness
 
 Read the continuation briefings and inspected the clean current branch, existing scripts, skill folders and root archive. The original archive passed integrity validation with 770 members. Managed setup restored Ghidra 12.2, Temurin 25.0.5+8, pefile 2024.8.26, Capstone 5.0.9 and Prettier 3.10.1. Direct setup rerun and the unmodified baseline functional checks passed.

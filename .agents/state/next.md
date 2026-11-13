@@ -1,5 +1,9 @@
 # Next
 
+## Current next action — 2026-11-13T21:36:00.163672+00:00
+
+Finish independent role evidence review, correct any source-supported report issue, inspect diff and save final checkpoint. Deliver the existing authentication report and distinguish the completed flow analysis from the unverified teacher-session reproduction. No credential guesses, role/session tampering, BTEC substitution or fallback/student reuse is planned. For authenticated reproduction, the minimum input is a legitimate teacher test credential/access code or authorized backend auth source. Cancel active wake rem_0cacd419a1b04a0b87401f09ed1b4660 once done; do not run idle checkpoints.
+
 ## Current next action — 2026-11-13 21:29 UTC
 
 The workspace-readiness task is verified. Confirm the final updater JSON reports no stale briefings or remaining files, verify the refreshed root `handoff.zip`, and synchronize only the current non-default branch when access allows. Cancel active-work wake `rem_ec605ad6a94545cea125526a844578af` after completion. Then stand by for the owner's next specific target/behavior/deliverable; do not resume or expand earlier web collection or infer a game task from profile examples.

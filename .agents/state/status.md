@@ -1,5 +1,11 @@
 # Status
 
+## Current authentication analysis — 2026-11-13T21:36:00.163672+00:00
+
+Target: production comp.school default authentication, excluding student fallback access. Completed offline tracing of the main client login branches, session hydration, role predicates and separate BTEC grant. The current public production bundle exactly matches original SHA-256 5c6a9d68b722e302195eac2602e907d1bb60657ebba32de14862e232fd748577. A fresh anonymous GET /api/session returned HTTP401. No credential-bearing request, guessing, role manipulation or privileged operation was performed.
+
+Report: web/comp.school/client/authentication.md. Normal POST /api/login sends either loginId/password or accessCode; it does not request a teacher role. Server-returned user.role is distinct from the URL view selector and from separate BTEC/fallback gates. No teacher session has been established. Minimum next input for legitimate reproduction: teacher test credential/access code or backend /api/login and /api/session source. Original/readable hashes, Node syntax and git diff --check passed. Independent role review is still pending. Existing web artifacts and setup are preserved; current branch remains hoplite/siris-b536f523.
+
 ## Current readiness task — 2026-11-13 21:29 UTC
 
 Target: this mc1h repository and its Linux x86-64 sandbox. Requested behavior: inspect the continuation handoff, restore/verify the existing RE tools, run Fastfetch, then stand by. Deliverable: verified local tooling, reproducible setup and an updated root handoff archive. No game binary, crash investigation, ESP implementation or offensive target action is part of this readiness task.

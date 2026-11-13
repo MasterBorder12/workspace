@@ -1,5 +1,11 @@
 # Handoff
 
+## Authentication analysis handoff — 2026-11-13T21:36:00.163672+00:00
+
+Read web/comp.school/client/authentication.md for evidence identity, exact source lines, normal request shapes, uncertainty and legitimate reproduction checks. Main production index-CHiQZc8e.js was re-fetched anonymously and its exact hash/size match the archive. Only other live read was anonymous /api/session, returning401. No login requests or teacher operations were attempted.
+
+Normal auth is /api/login plus /api/session. Role comes from returned user, not a supplied role field. Do not conflate role query/view state, separate BTEC success or fallback grants with a teacher session. No backend verifier/session-store implementation is available. A valid teacher test credential or authorized backend auth source is the next dependency, not a guessed offset or role override. Independent role-evidence agent report remains to be reviewed before final delivery. Use the existing checkpoint updater; cancel active wake rem_0cacd419a1b04a0b87401f09ed1b4660 after delivery.
+
 ## Readiness update — 2026-11-13 21:29 UTC
 
 Continue on `hoplite/siris-b536f523`; the former branch names below are historical. Preserve the completed web archive. The readiness request is complete apart from the final checkpoint/synchronization confirmation, not an instruction to expand the previous web investigation.

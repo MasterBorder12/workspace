@@ -1,9 +1,9 @@
 {
-  "time": "2026-11-13T21:29:46.701716+00:00",
+  "time": "2026-11-13T21:36:00.227961+00:00",
   "branch": "hoplite/siris-b536f523",
-  "parent": "015e6f3142ce6a7c72f2f9658669c51c58491c2a",
-  "digest": "bf7b08731935d2c52ad719849f6a53819da242192ba3d33feda85a70934635fa",
-  "count": 770,
+  "parent": "13691550e600fca4a030753bdbb3f60c1cd2ca04",
+  "digest": "42d806863fe38271a242c3d3285981fb3e3479cb77fee0c64261f44425989878",
+  "count": 771,
   "files": [
     ".agents/scripts/autoupdate.py",
     ".agents/scripts/browseraudit.mjs",
@@ -230,6 +230,7 @@
     "web/comp.school/client/apps/printouts.comp.school.md",
     "web/comp.school/client/apps/self-assess.comp.school.md",
     "web/comp.school/client/apps/static.cloudflareinsights.com.md",
+    "web/comp.school/client/authentication.md",
     "web/comp.school/client/bundles.json",
     "web/comp.school/client/dependencies.json",
     "web/comp.school/client/embedded.json",
